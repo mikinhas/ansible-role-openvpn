@@ -18,8 +18,6 @@ keepalive {{ openvpn_keepalive_ping }} {{ openvpn_keepalive_timeout }}
 {% if openvpn_compression is not undefined and openvpn_compression != "" %}
 compress {{ openvpn_compression }}
 {% endif %}
-persist-key
-persist-tun
 verb 3
 
 {% if openvpn_use_ldap %}
